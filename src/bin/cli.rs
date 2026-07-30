@@ -1,4 +1,4 @@
-use merch_store::server::app::AppConfig;
+use merch_store::server::types::app_config::AppConfig;
 use toasty_cli::{Config, ToastyCli};
 
 #[tokio::main]
