@@ -6,7 +6,7 @@ use daraja_sdk::mpesa::{self, GenerateAccessTokenResponse, MpesaExpress};
 use jiff::{SignedDuration, Timestamp};
 use serde::Deserialize;
 
-use crate::server::types::app_config::AppConfig;
+use crate::server::types::{app_config::AppConfig, requests::CreatePaymentRequest};
 
 pub async fn start_server() {
     let app = Router::new()
@@ -21,12 +21,6 @@ pub async fn start_server() {
 
 async fn index_handler() -> &'static str {
     "Hello, World"
-}
-
-#[derive(Deserialize)]
-struct CreatePaymentRequest {
-    phone_number: u64,
-    amount: u32,
 }
 
 #[derive(toasty::Model)]
