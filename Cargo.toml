@@ -5,4 +5,7 @@ edition = "2024"
 
 [dependencies]
 axum = "0.8.9"
+daraja-sdk = "0.3.0"
+serde = { version = "1.0.229", features = ["derive"] }
 tokio = { version = "1.53.1", features = ["rt", "macros", "rt-multi-thread"] }
+toml = "1.1.4"
