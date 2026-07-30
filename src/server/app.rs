@@ -4,9 +4,8 @@ use axum::{
 };
 use daraja_sdk::mpesa::{self, GenerateAccessTokenResponse, MpesaExpress};
 use jiff::{SignedDuration, Timestamp};
-use serde::Deserialize;
 
-use crate::server::types::{app_config::AppConfig, requests::CreatePaymentRequest};
+use crate::server::{models::AppCache, types::{app_config::AppConfig, requests::CreatePaymentRequest}};
 
 pub async fn start_server() {
     let app = Router::new()
@@ -21,21 +20,6 @@ pub async fn start_server() {
 
 async fn index_handler() -> &'static str {
     "Hello, World"
-}
-
-#[derive(toasty::Model)]
-struct AppCache {
-    #[key]
-    #[auto]
-    id: u64,
-
-    #[column(type = varchar(255))]
-    #[unique]
-    key: String,
-
-    #[column(type = varchar(255))]
-    value: String,
-    expires_at: jiff::Timestamp,
 }
 
 async fn generate_access_token(

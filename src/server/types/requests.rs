@@ -2,6 +2,6 @@ use serde::Deserialize;
 
 #[derive(Deserialize)]
 pub struct CreatePaymentRequest {
-    phone_number: u64,
-    amount: u32,
+    pub phone_number: u64,
+    pub amount: u32,
 }
