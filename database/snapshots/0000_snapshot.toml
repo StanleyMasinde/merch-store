@@ -1,0 +1,48 @@
+version = 1
+
+[schema]
+
+[[schema.tables]]
+id = 0
+name = "app_caches"
+primary_key = { columns = [{ table = 0, index = 0 }], index = { table = 0, index = 0 } }
+
+[[schema.tables.columns]]
+id = { table = 0, index = 0 }
+name = "id"
+ty = "U64"
+storage_ty = { UnsignedInteger = 8 }
+auto_increment = true
+
+[[schema.tables.columns]]
+id = { table = 0, index = 1 }
+name = "key"
+ty = "String"
+storage_ty = { VarChar = 255 }
+
+[[schema.tables.columns]]
+id = { table = 0, index = 2 }
+name = "value"
+ty = "String"
+storage_ty = { VarChar = 255 }
+
+[[schema.tables.columns]]
+id = { table = 0, index = 3 }
+name = "expires_at"
+ty = "Timestamp"
+storage_ty = { DateTime = 6 }
+
+[[schema.tables.indices]]
+id = { table = 0, index = 0 }
+name = "index_app_caches_by_id"
+on = 0
+columns = [{ column = { table = 0, index = 0 }, op = "Eq", scope = "Partition" }]
+unique = true
+primary_key = true
+
+[[schema.tables.indices]]
+id = { table = 0, index = 1 }
+name = "index_app_caches_by_key"
+on = 0
+columns = [{ column = { table = 0, index = 1 }, op = "Eq", scope = "Partition" }]
+unique = true

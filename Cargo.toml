@@ -2,10 +2,15 @@
 name = "merch_store"
 version = "0.1.0"
 edition = "2024"
+default-run = "merch_store"
 
 [dependencies]
+anyhow = "1.0.104"
 axum = "0.8.9"
 daraja-sdk = "0.3.0"
+jiff = "0.2.35"
 serde = { version = "1.0.229", features = ["derive"] }
+toasty = { version = "0.9.0", features = ["mysql", "jiff"] }
+toasty-cli = "0.9.0"
 tokio = { version = "1.53.1", features = ["rt", "macros", "rt-multi-thread"] }
 toml = "1.1.4"
