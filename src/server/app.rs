@@ -49,9 +49,11 @@ pub struct DbConfig {
 
 impl AppConfig {
     pub fn load() -> Self {
-        let path = concat!(env!("CARGO_MANIFEST_DIR"), "/config.toml");
-        let contents = std::fs::read_to_string(path)
-            .expect("copy config.toml.example to config.toml and add credentials");
+        let path = std::env::args()
+            .nth(1)
+            .unwrap_or_else(|| "config.toml".to_string());
+        let contents = std::fs::read_to_string(&path)
+            .unwrap_or_else(|_| panic!("couldn't read config at {path}"));
         toml::from_str(&contents).expect("config.toml is malformed")
     }
 }
