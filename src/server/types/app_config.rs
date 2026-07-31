@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 use serde::Deserialize;
 
 #[derive(Deserialize)]
@@ -28,5 +30,11 @@ impl AppConfig {
         let contents = std::fs::read_to_string(&path)
             .unwrap_or_else(|_| panic!("couldn't read config at {path}"));
         toml::from_str(&contents).expect("config.toml is malformed")
+    }
+
+    pub fn with_path(path: PathBuf) -> Self {
+        let contents = std::fs::read_to_string(&path)
+            .unwrap_or_else(|_| panic!("Couldn't read config at {}", path.to_string_lossy()));
+        toml::from_str(&contents).expect("Config is malformed.")
     }
 }

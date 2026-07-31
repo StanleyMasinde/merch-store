@@ -7,7 +7,7 @@ async fn main() -> anyhow::Result<()> {
     let AppConfig {
         daraja: _,
         database,
-    } = AppConfig::load();
+    } = AppConfig::with_path("config.toml".into());
 
     let db = toasty::Db::builder()
         .models(toasty::models!(merch_store::*))
