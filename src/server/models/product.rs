@@ -27,8 +27,10 @@ pub struct Product {
     pub variants: toasty::Deferred<Vec<ProductVariant>>,
 
     #[auto]
+    #[default(jiff::Timestamp::now())]
     pub created_at: jiff::Timestamp,
 
     #[auto]
+    #[update(jiff::Timestamp::now())]
     pub updated_at: jiff::Timestamp,
 }

@@ -35,8 +35,10 @@ pub struct ProductVariant {
     pub stock_quantity: u32,
 
     #[auto]
+    #[default(jiff::Timestamp::now())]
     pub created_at: jiff::Timestamp,
 
     #[auto]
+    #[update(jiff::Timestamp::now())]
     pub updated_at: jiff::Timestamp,
 }
