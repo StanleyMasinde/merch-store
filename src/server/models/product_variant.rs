@@ -27,6 +27,10 @@ pub struct ProductVariant {
     /// Prices are per-variant (e.g., 2XL costs $2 more, or vinyl costs more than CD)
     pub price_cents: u64,
 
+    /// The currency
+    #[column(type = varchar(3))]
+    pub currency_symbol: String,
+
     /// Available inventory stock count for this specific SKU
     pub stock_quantity: u32,
 
