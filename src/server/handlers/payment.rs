@@ -70,7 +70,7 @@ pub async fn pay(
         }
     };
 
-    println!("{}", access_token);
+    tracing::debug!("{}", access_token);
 
     let response = MpesaExpress::new()
         .access_token(&access_token)
@@ -87,6 +87,6 @@ pub async fn pay(
         .await
         .unwrap();
 
-    println!("{}", response.customer_message);
+    tracing::debug!("{}", response.customer_message);
     response.customer_message
 }

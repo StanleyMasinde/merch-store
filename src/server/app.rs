@@ -2,7 +2,10 @@ use axum::{
     Router,
     routing::{get, post},
 };
+
 use toasty::Db;
+use tower::ServiceBuilder;
+use tower_http::trace::TraceLayer;
 
 use crate::server::{handlers, types::app_config::AppConfig};
 
@@ -39,11 +42,13 @@ pub async fn start_server() {
                 .patch(handlers::update_product)
                 .delete(handlers::delete_product),
         )
-        .with_state(state);
+        .with_state(state)
+        .layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()));
 
     let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
         .await
         .unwrap();
-    println!("App running on http://localhost:3000");
+
+    tracing::info!("App running on http://localhost:3000");
     axum::serve(listener, app).await.unwrap();
 }
