@@ -2,7 +2,7 @@ use std::path::PathBuf;
 
 use serde::Deserialize;
 
-#[derive(Deserialize)]
+#[derive(Clone, Deserialize)]
 pub struct Daraja {
     pub consumer_key: String,
     pub consumer_secret: String,
@@ -11,12 +11,12 @@ pub struct Daraja {
     pub business_shortcode: u32,
 }
 
-#[derive(Deserialize)]
+#[derive(Clone, Deserialize)]
 pub struct DbConfig {
     pub connection: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Clone, Deserialize)]
 pub struct AppConfig {
     pub daraja: Daraja,
     pub database: DbConfig,

@@ -1,11 +1,8 @@
-use axum::Json;
+use axum::{Json, extract::State};
 use daraja_sdk::mpesa::{self, GenerateAccessTokenResponse, MpesaExpress};
 use jiff::{SignedDuration, Timestamp};
 
-use crate::server::{
-    models::AppCache,
-    types::{app_config::AppConfig, requests::CreatePaymentRequest},
-};
+use crate::server::{app::AppState, models::AppCache, types::requests::CreatePaymentRequest};
 
 async fn generate_access_token(
     consumer_key: &str,
@@ -16,14 +13,11 @@ async fn generate_access_token(
     client.generate_access_token().await.unwrap()
 }
 
-pub async fn pay(Json(payload): Json<CreatePaymentRequest>) -> String {
-    let AppConfig { daraja, database } = AppConfig::load();
-    let mut db = toasty::Db::builder()
-        .models(toasty::models!(crate::*))
-        .connect(&database.connection)
-        .await
-        .unwrap();
-
+pub async fn pay(
+    State(state): State<AppState>,
+    Json(payload): Json<CreatePaymentRequest>,
+) -> String {
+    let AppState { mut db, config } = state;
     let get_token_req = AppCache::filter_by_key("mpesa_access_token")
         .get(&mut db)
         .await;
@@ -31,8 +25,11 @@ pub async fn pay(Json(payload): Json<CreatePaymentRequest>) -> String {
     let access_token = match get_token_req {
         Ok(mut db_access_token) => {
             if db_access_token.expires_at < Timestamp::now() {
-                let token =
-                    generate_access_token(&daraja.consumer_key, &daraja.consumer_secret).await;
+                let token = generate_access_token(
+                    &config.daraja.consumer_key,
+                    &config.daraja.consumer_secret,
+                )
+                .await;
                 let now = Timestamp::now();
                 let expires_at =
                     now.checked_add(SignedDuration::from_secs(token.expires_in.parse().unwrap()));
@@ -53,7 +50,8 @@ pub async fn pay(Json(payload): Json<CreatePaymentRequest>) -> String {
         Err(_) => {
             let now = Timestamp::now();
             let new_access_token =
-                generate_access_token(&daraja.consumer_key, &daraja.consumer_secret).await;
+                generate_access_token(&config.daraja.consumer_key, &config.daraja.consumer_secret)
+                    .await;
             let expires_at = now
                 .checked_add(SignedDuration::from_secs(
                     new_access_token.expires_in.parse().unwrap(),
@@ -76,10 +74,10 @@ pub async fn pay(Json(payload): Json<CreatePaymentRequest>) -> String {
 
     let response = MpesaExpress::new()
         .access_token(&access_token)
-        .passkey(&daraja.passkey)
-        .business_short_code(daraja.business_shortcode)
+        .passkey(&config.daraja.passkey)
+        .business_short_code(config.daraja.business_shortcode)
         .party_a(payload.phone_number)
-        .party_b(daraja.business_shortcode)
+        .party_b(config.daraja.business_shortcode)
         .phone_number(payload.phone_number)
         .amount(payload.amount)
         .account_reference("Order123")
