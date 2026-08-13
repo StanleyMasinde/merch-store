@@ -1,8 +1,8 @@
 [package]
-name = "merch_store"
+name = "merch-store"
 version = "0.1.0"
 edition = "2024"
-default-run = "merch_store"
+default-run = "merch-store"
 
 [dependencies]
 anyhow = "1.0.104"
