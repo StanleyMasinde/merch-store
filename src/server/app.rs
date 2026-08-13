@@ -13,7 +13,7 @@ static MIGRATIONS: toasty::migration::MigrationSet = toasty::embed_migrations!("
 async fn migrate(db: &toasty::Db) -> toasty::Result<()> {
     let report = MIGRATIONS.apply(db).await?;
 
-    println!("applied {} migrations", report.applied());
+    tracing::info!("applied {} migrations", report.applied());
     Ok(())
 }
 
