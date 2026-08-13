@@ -8,6 +8,14 @@ use tower::ServiceBuilder;
 use tower_http::trace::TraceLayer;
 
 use crate::server::{handlers, types::app_config::AppConfig};
+static MIGRATIONS: toasty::migration::MigrationSet = toasty::embed_migrations!("database");
+
+async fn migrate(db: &toasty::Db) -> toasty::Result<()> {
+    let report = MIGRATIONS.apply(db).await?;
+
+    println!("applied {} migrations", report.applied());
+    Ok(())
+}
 
 #[derive(Clone)]
 pub struct AppState {
@@ -20,11 +28,16 @@ pub async fn start_server() {
         daraja: _,
         database,
     } = AppConfig::load();
+
     let db = toasty::Db::builder()
         .models(toasty::models!(crate::*))
         .connect(&database.connection)
         .await
         .unwrap();
+
+    if let Err(err) = migrate(&db).await {
+        tracing::info!("Failed to run migrations. {err}")
+    };
 
     let config = AppConfig::load();
 
