@@ -7,7 +7,10 @@ use toasty::Db;
 use tower::ServiceBuilder;
 use tower_http::trace::TraceLayer;
 
-use crate::server::{handlers, types::app_config::AppConfig};
+use crate::server::{
+    handlers::{self, index::global_fallback_handler},
+    types::app_config::AppConfig,
+};
 static MIGRATIONS: toasty::migration::MigrationSet = toasty::embed_migrations!("database");
 
 async fn migrate(db: &toasty::Db) -> toasty::Result<()> {
@@ -56,7 +59,8 @@ pub async fn start_server() {
                 .delete(handlers::delete_product),
         )
         .with_state(state)
-        .layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()));
+        .layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()))
+        .fallback(global_fallback_handler);
 
     let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
         .await

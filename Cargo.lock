@@ -2324,6 +2324,7 @@ dependencies = [
  "jiff",
  "serde",
  "serde_json",
+ "thiserror",
  "toasty",
  "toasty-cli",
  "tokio",
