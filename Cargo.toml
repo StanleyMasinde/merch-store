@@ -8,8 +8,9 @@ default-run = "merch-store"
 anyhow = "1.0.104"
 axum = { version = "0.8.9", features = ["tracing"] }
 daraja-sdk = "0.4.0"
-jiff = "0.2.35"
+jiff = { version = "0.2.35", features = ['serde'] }
 serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
 toasty = { version = "0.10.0", features = ["mysql", "jiff"] }
 toasty-cli = "0.10.0"
 tokio = { version = "1.53.1", features = ["rt", "macros", "rt-multi-thread"] }

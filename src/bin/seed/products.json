@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Mechanical Keyboard Switch Plushie",
+    "slug": "mechanical-keyboard-switch-plushie",
+    "description": "A soft, oversized plushie shaped like a mechanical keyboard tactile switch. Features a removable top housing and stem.",
+    "featured_image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "is_active": true
+  },
+  {
+    "name": "Git Commit Dad Hat",
+    "slug": "git-commit-dad-hat",
+    "description": "Low-profile cotton baseball cap embroidered with 'git commit -m \"fixed everything\"' on the front.",
+    "featured_image_url": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b",
+    "is_active": true
+  },
+  {
+    "name": "Rust Ferris Mascot Enamel Pin",
+    "slug": "rust-ferris-mascot-enamel-pin",
+    "description": "Hard enamel pin featuring Ferris the Crab, the official mascot of the Rust programming language.",
+    "featured_image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe",
+    "is_active": true
+  },
+  {
+    "name": "Vim Navigation Keycaps Desk Mat",
+    "slug": "vim-navigation-keycaps-desk-mat",
+    "description": "Extra-large 900x400mm desk mat featuring HJKL movement vectors, Vim shortcuts, and a dark terminal aesthetic.",
+    "featured_image_url": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2",
+    "is_active": true
+  },
+  {
+    "name": "Coffee -> Code Ceramic Mug (15oz)",
+    "slug": "coffee-code-ceramic-mug-15oz",
+    "description": "Heavy-duty black ceramic mug with a matte finish and a heat-sensitive syntax-highlighted code block that reveals upon filling.",
+    "featured_image_url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
+    "is_active": true
+  },
+  {
+    "name": "Binary Code Silk Tie",
+    "slug": "binary-code-silk-tie",
+    "description": "100% woven silk necktie with a subtle dark grey on black binary matrix pattern for tech professionals.",
+    "featured_image_url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10",
+    "is_active": true
+  },
+  {
+    "name": "Works on My Machine Zip Hoodie",
+    "slug": "works-on-my-machine-zip-hoodie",
+    "description": "Heavyweight French terry zip-up hoodie featuring a local host Docker badge on the left chest and full print back.",
+    "featured_image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2",
+    "is_active": true
+  },
+  {
+    "name": "404 Page Not Found Socks",
+    "slug": "404-page-not-found-socks",
+    "description": "Combed cotton crew socks styled after retro HTTP status error screens with classic teal and white accents.",
+    "featured_image_url": "https://images.unsplash.com/photo-1582966772680-860e372bb558",
+    "is_active": true
+  },
+  {
+    "name": "Silicon Wafer Coaster Set (4-Pack)",
+    "slug": "silicon-wafer-coaster-set-4-pack",
+    "description": "Real glass coasters engineered with high-resolution microchip circuit board patterns embedded underneath.",
+    "featured_image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "is_active": true
+  },
+  {
+    "name": "There is No Cloud Water Bottle",
+    "slug": "there-is-no-cloud-water-bottle",
+    "description": "32oz vacuum-insulated stainless steel flask with 'There is no cloud, it's just someone else's computer' printed in UV gloss.",
+    "featured_image_url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8",
+    "is_active": true
+  },
+  {
+    "name": "Circuit Board Pattern Duffel Bag",
+    "slug": "circuit-board-pattern-duffel-bag",
+    "description": "Water-resistant weekend travel duffel with gold-plated trace accents over a deep matte green finish.",
+    "featured_image_url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+    "is_active": true
+  },
+  {
+    "name": "Command Line Cheat Sheet T-Shirt",
+    "slug": "command-line-cheat-sheet-t-shirt",
+    "description": "Soft organic cotton tee featuring inverted common Bash and Linux terminal commands for emergency reference.",
+    "featured_image_url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
+    "is_active": true
+  },
+  {
+    "name": "Retro Floppy Disk Coasters",
+    "slug": "retro-floppy-disk-coasters",
+    "description": "Set of 5 silicone non-slip drink coasters modeled faithfully after 3.5-inch 1.44MB floppy disks.",
+    "featured_image_url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12",
+    "is_active": true
+  },
+  {
+    "name": "Mechanical Keyboard Keycap Sticker Pack",
+    "slug": "mechanical-keyboard-keycap-sticker-pack",
+    "description": "Die-cut vinyl sticker pack featuring artisan keycaps, switch diagrams, and custom DSA profile graphics.",
+    "featured_image_url": "https://images.unsplash.com/photo-1572375992501-4b0892d50c69",
+    "is_active": true
+  },
+  {
+    "name": "Cyberpunk Neon City Mousepad",
+    "slug": "cyberpunk-neon-city-mousepad",
+    "description": "Extended RGB mousepad featuring dynamic edge lighting and a high-contrast synthwave grid illustration.",
+    "featured_image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe",
+    "is_active": true
+  },
+  {
+    "name": "Hardware Hackers Tool Roll Tote",
+    "slug": "hardware-hackers-tool-roll-tote",
+    "description": "Canvas tote bag equipped with dedicated inner sleeves for wire strippers, soldering irons, and breadboards.",
+    "featured_image_url": "https://images.unsplash.com/photo-1544816155-12df9643f363",
+    "is_active": true
+  },
+  {
+    "name": "Semicolon Missing Crewneck Sweatshirt",
+    "slug": "semicolon-missing-crewneck-sweatshirt",
+    "description": "Minimalist fleece pullover featuring a subtle single floating red semicolon on the collar.",
+    "featured_image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2",
+    "is_active": true
+  },
+  {
+    "name": "Terminal Green Phosphor Wall Clock",
+    "slug": "terminal-green-phosphor-wall-clock",
+    "description": "12-inch wall clock styled after classic VT100 cathode-ray terminals with glowing neon green LED digits.",
+    "featured_image_url": "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c",
+    "is_active": true
+  },
+  {
+    "name": "Open Source Supporter Canvas Cap",
+    "slug": "open-source-supporter-canvas-cap",
+    "description": "Unstructured 6-panel strapback hat made from recycled canvas with an OSI emblem patch.",
+    "featured_image_url": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b",
+    "is_active": true
+  },
+  {
+    "name": "Rubber Duck Debugging Companion",
+    "slug": "rubber-duck-debugging-companion",
+    "description": "Premium weighted desk rubber duck wearing a tiny pair of blue-light blocking glasses and headphones.",
+    "featured_image_url": "https://images.unsplash.com/photo-1559715745-e1b34a25888f",
+    "is_active": true
+  },
+  {
+    "name": "Dark Mode Forever Enamel Pin",
+    "slug": "dark-mode-forever-enamel-pin",
+    "description": "Glow-in-the-dark enamel pin shaped like an OS system toggle switch fixed permanently to 'Dark Mode'.",
+    "featured_image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe",
+    "is_active": true
+  },
+  {
+    "name": "Syntax Error Enamel Keyring",
+    "slug": "syntax-error-enamel-keyring",
+    "description": "Heavy metal key fob with red enamel inlay reading 'Uncaught SyntaxError: Unexpected token'.",
+    "featured_image_url": "https://images.unsplash.com/photo-1582142327471-8422713f042e",
+    "is_active": true
+  },
+  {
+    "name": "Kubernetes Pod Plushie Set",
+    "slug": "kubernetes-pod-plushie-set",
+    "description": "Stackable set of 3 micro plushies styled as container pods inside a ship helm storage pouch.",
+    "featured_image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "is_active": true
+  },
+  {
+    "name": "sudo make me a sandwich T-Shirt",
+    "slug": "sudo-make-me-a-sandwich-t-shirt",
+    "description": "Classic xkcd comic reference screenprinted on a premium pre-shrunk tri-blend grey t-shirt.",
+    "featured_image_url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
+    "is_active": true
+  },
+  {
+    "name": "Custom PCB Ruler (12 inch / 30cm)",
+    "slug": "custom-pcb-ruler-12-inch-30cm",
+    "description": "Gold-plated FR-4 fiberglass ruler packed with surface-mount device component footprints, wire gauge references, and pinouts.",
+    "featured_image_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758",
+    "is_active": true
+  },
+  {
+    "name": "DevOps Infinite Loop Hoodie",
+    "slug": "devops-infinite-loop-hoodie",
+    "description": "Pullover hoodie showcasing a continuous CI/CD pipeline infinity loop graphic printed on soft tech-fleece.",
+    "featured_image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2",
+    "is_active": true
+  },
+  {
+    "name": "Pixel Art Heart LED Desk Lamp",
+    "slug": "pixel-art-heart-led-desk-lamp",
+    "description": "8-bit retro styled acrylic night light with customizable RGB color settings and touch control base.",
+    "featured_image_url": "https://images.unsplash.com/photo-1507499739999-097706ad8914",
+    "is_active": true
+  },
+  {
+    "name": "ASCII Art Portrait Poster (18x24)",
+    "slug": "ascii-art-portrait-poster-18x24",
+    "description": "Museum-grade matte paper poster displaying iconic computer pioneers rendered entirely in ASCII text.",
+    "featured_image_url": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675",
+    "is_active": true
+  },
+  {
+    "name": "Binary Code Leather Journal",
+    "slug": "binary-code-leather-journal",
+    "description": "Refillable leather notebook with embossed binary sequences on the cover and archival dot-grid paper inside.",
+    "featured_image_url": "https://images.unsplash.com/photo-1544816155-12df9643f363",
+    "is_active": true
+  },
+  {
+    "name": "Cable Management Velcro Strap Pack",
+    "slug": "cable-management-velcro-strap-pack",
+    "description": "Set of 20 high-density branded cable ties featuring tech joke prints and color-coded organization tags.",
+    "featured_image_url": "https://images.unsplash.com/photo-1588508065123-287b28e013da",
+    "is_active": true
+  },
+  {
+    "name": "No Place Like 127.0.0.1 Welcome Mat",
+    "slug": "no-place-like-127-0-0-1-welcome-mat",
+    "description": "Durable outdoor coir doormat engraved with 'There is no place like 127.0.0.1' and a rubber anti-slip backing.",
+    "featured_image_url": "https://images.unsplash.com/photo-1584589167171-541ce45f1eea",
+    "is_active": true
+  },
+  {
+    "name": "Keyboard Lubrication Station Kit",
+    "slug": "keyboard-lubrication-station-kit",
+    "description": "Acrylic switch lube station complete with stem holders, Krytox grease, brush set, and switch pullers.",
+    "featured_image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "is_active": true
+  },
+  {
+    "name": "Algorithm Runtime Complexity Mug",
+    "slug": "algorithm-runtime-complexity-mug",
+    "description": "Big O Notation cheat sheet graphic printed around a durable 11oz white ceramic coffee cup.",
+    "featured_image_url": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
+    "is_active": true
+  },
+  {
+    "name": "AI Generated Art Canvas Print",
+    "slug": "ai-generated-art-canvas-print",
+    "description": "Abstract generative neural network latent space visualization printed on stretched gallery canvas.",
+    "featured_image_url": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675",
+    "is_active": true
+  },
+  {
+    "name": "Gopher Plush Mascot (Go Language)",
+    "slug": "gopher-plush-mascot-go-language",
+    "description": "Officially styled blue stuffed gopher mascot plushie with safety eyes and soft plush fur.",
+    "featured_image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "is_active": true
+  },
+  {
+    "name": "Clean Code Matte Black Tumbler",
+    "slug": "clean-code-matte-black-tumbler",
+    "description": "Double-wall insulated travel tumbler with spill-resistant lid and 'Keep Code Clean' minimal branding.",
+    "featured_image_url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8",
+    "is_active": true
+  },
+  {
+    "name": "Glitch Effect Anorak Windbreaker",
+    "slug": "glitch-effect-anorak-windbreaker",
+    "description": "Lightweight water-repellent jacket featuring a subtle digital distortion chromatic aberration pattern.",
+    "featured_image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2",
+    "is_active": true
+  },
+  {
+    "name": "Custom PCB Keycap Artisan",
+    "slug": "custom-pcb-keycap-artisan",
+    "description": "Hand-poured clear resin MX keycap encapsulating a real miniature green printed circuit board inside.",
+    "featured_image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "is_active": true
+  },
+  {
+    "name": "Frontend vs Backend Split T-Shirt",
+    "slug": "frontend-vs-backend-split-t-shirt",
+    "description": "Dual-design shirt showing polished UI artwork on the front and chaotic spaghetti code on the inside lining.",
+    "featured_image_url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
+    "is_active": true
+  },
+  {
+    "name": "Nixie Tube Desktop Clock",
+    "slug": "nixie-tube-desktop-clock",
+    "description": "Modern USB-powered desk clock utilizing authentic vintage IN-14 Nixie tubes with customizable backlighting.",
+    "featured_image_url": "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c",
+    "is_active": true
+  },
+  {
+    "name": "Cyber Security Hacker Mask Hoodie",
+    "slug": "cyber-security-hacker-mask-hoodie",
+    "description": "Heavy pullover hoodie with built-in high-neck face gaiter and stealth utility sleeve pockets.",
+    "featured_image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2",
+    "is_active": true
+  },
+  {
+    "name": "Refactor Coffee Beans (12oz Whole Bean)",
+    "slug": "refactor-coffee-beans-12oz-whole-bean",
+    "description": "Dark roast single-origin Ethiopian coffee beans roasted specifically for long debugging sessions.",
+    "featured_image_url": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e",
+    "is_active": true
+  },
+  {
+    "name": "Hardware Schematics Bandana / Lens Cloth",
+    "slug": "hardware-schematics-bandana-lens-cloth",
+    "description": "Microfiber square featuring full schematic diagrams of the historic Commodore 64 motherboard.",
+    "featured_image_url": "https://images.unsplash.com/photo-1584589167171-541ce45f1eea",
+    "is_active": true
+  },
+  {
+    "name": "Keyboard Wrist Rest (Walnut Wood)",
+    "slug": "keyboard-wrist-rest-walnut-wood",
+    "description": "Ergonomic solid American walnut wood wrist rest polished with natural oils for 60% and TKL keyboards.",
+    "featured_image_url": "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2",
+    "is_active": true
+  },
+  {
+    "name": "Data Scientist Confusion Matrix Sticker",
+    "slug": "data-scientist-confusion-matrix-sticker",
+    "description": "Matte vinyl die-cut sticker depicting True Positives vs False Negatives with humorist labeling.",
+    "featured_image_url": "https://images.unsplash.com/photo-1572375992501-4b0892d50c69",
+    "is_active": true
+  },
+  {
+    "name": "Retro Terminal Font Beanie",
+    "slug": "retro-terminal-font-beanie",
+    "description": "Knit cuff beanie with green monospaced text embroidery reading 'ROOT' on the front fold.",
+    "featured_image_url": "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9",
+    "is_active": true
+  },
+  {
+    "name": "Tux the Linux Penguin Plush",
+    "slug": "tux-the-linux-penguin-plush",
+    "description": "Classic sitting Tux penguin plush toy, 8 inches tall, made with ultra-soft hypoallergenic fabrics.",
+    "featured_image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "is_active": true
+  },
+  {
+    "name": "Infinite Loop Metal Bookmark",
+    "slug": "infinite-loop-metal-bookmark",
+    "description": "Laser-cut stainless steel bookmark engraved with recursion algorithms and decorative logic gates.",
+    "featured_image_url": "https://images.unsplash.com/photo-1544816155-12df9643f363",
+    "is_active": true
+  },
+  {
+    "name": "Stack Overflow Copy Paste Desk Button",
+    "slug": "stack-overflow-copy-paste-desk-button",
+    "description": "Programmable two-key mechanical macropad dedicated exclusively to Ctrl+C and Ctrl+V functions.",
+    "featured_image_url": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "is_active": true
+  },
+  {
+    "name": "Silicon Chip Microstructure Wall Tapestry",
+    "slug": "silicon-chip-microstructure-wall-tapestry",
+    "description": "Large 60x50 inch fabric tapestry showcasing electron microscope photography of an integrated circuit.",
+    "featured_image_url": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675",
+    "is_active": true
+  }
+]
