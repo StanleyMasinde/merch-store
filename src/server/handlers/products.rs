@@ -1,4 +1,17 @@
-pub async fn list_products() {}
+use crate::server::{app::AppState, errors::AppError, models::Product};
+use axum::{Json, extract::State};
+
+#[axum::debug_handler]
+pub async fn list_products(State(state): State<AppState>) -> Result<Json<Vec<Product>>, AppError> {
+    let AppState { mut db, config: _ } = state;
+
+    let products = Product::all()
+        .exec(&mut db)
+        .await
+        .map_err(|err| AppError::DatabaseError(err.to_string()))?;
+
+    Ok(Json(products))
+}
 
 pub async fn create_product() {}
 

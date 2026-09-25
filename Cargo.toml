@@ -6,7 +6,7 @@ default-run = "merch-store"
 
 [dependencies]
 anyhow = "1.0.104"
-axum = { version = "0.8.9", features = ["tracing"] }
+axum = { version = "0.8.9", features = ["tracing", "macros"] }
 daraja-sdk = "0.4.0"
 jiff = { version = "0.2.35", features = ['serde'] }
 serde = { version = "1.0.229", features = ["derive"] }

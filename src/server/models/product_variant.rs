@@ -1,6 +1,8 @@
+use serde::Serialize;
+
 use crate::server::models::Product;
 
-#[derive(toasty::Model)]
+#[derive(toasty::Model, Serialize)]
 pub struct ProductVariant {
     #[key]
     #[auto]
@@ -9,6 +11,7 @@ pub struct ProductVariant {
     #[index]
     pub product_id: u64,
 
+    #[serde(skip_serializing)]
     #[belongs_to(key = product_id, references = id)]
     pub product: toasty::Deferred<Product>,
 

@@ -1,6 +1,8 @@
+use serde::Serialize;
+
 use crate::server::models::ProductVariant;
 
-#[derive(toasty::Model)]
+#[derive(toasty::Model, Serialize)]
 pub struct Product {
     #[key]
     #[auto]
@@ -23,6 +25,7 @@ pub struct Product {
     pub is_active: bool,
 
     /// Merch variants (e.g., "M / Black", "Poster 18x24", "Vinyl LP")
+    #[serde(skip_serializing)]
     #[has_many]
     pub variants: toasty::Deferred<Vec<ProductVariant>>,
 

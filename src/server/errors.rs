@@ -4,14 +4,17 @@ use thiserror::Error;
 
 #[derive(Debug, Error)]
 pub enum AppError {
-    #[error("The resource {0}, could not be found.")]
-    ResourceNotFound(String),
+    #[error("A database error occoured.")]
+    DatabaseError(String),
 }
 
 impl IntoResponse for AppError {
     fn into_response(self) -> axum::response::Response {
         let (status, error_message) = match self {
-            AppError::ResourceNotFound(_) => (StatusCode::NOT_FOUND, self.to_string()),
+            AppError::DatabaseError(ref err) => {
+                tracing::error!("Database error: {:?}", err);
+                (StatusCode::INTERNAL_SERVER_ERROR, self.to_string())
+            }
         };
 
         let body = Json(json!({
