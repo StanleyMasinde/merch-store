@@ -6,6 +6,9 @@ use thiserror::Error;
 pub enum AppError {
     #[error("A database error occoured.")]
     DatabaseError(String),
+
+    #[error("Model not found.")]
+    ModelNotFound,
 }
 
 impl IntoResponse for AppError {
@@ -15,6 +18,7 @@ impl IntoResponse for AppError {
                 tracing::error!("Database error: {:?}", err);
                 (StatusCode::INTERNAL_SERVER_ERROR, self.to_string())
             }
+            AppError::ModelNotFound => (StatusCode::NOT_FOUND, self.to_string()),
         };
 
         let body = Json(json!({

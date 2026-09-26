@@ -1,5 +1,8 @@
 use crate::server::{app::AppState, errors::AppError, models::Product};
-use axum::{Json, extract::State};
+use axum::{
+    Json,
+    extract::{Path, State},
+};
 
 #[axum::debug_handler]
 pub async fn list_products(State(state): State<AppState>) -> Result<Json<Vec<Product>>, AppError> {
@@ -15,7 +18,17 @@ pub async fn list_products(State(state): State<AppState>) -> Result<Json<Vec<Pro
 
 pub async fn create_product() {}
 
-pub async fn show_product() {}
+pub async fn show_product(
+    Path(id): Path<u64>,
+    State(state): State<AppState>,
+) -> Result<Json<Product>, AppError> {
+    let AppState { mut db, config: _ } = state;
+    let product = Product::get_by_id(&mut db, id)
+        .await
+        .map_err(|_err| AppError::ModelNotFound)?;
+
+    Ok(Json(product))
+}
 
 pub async fn update_product() {}
 
