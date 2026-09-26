@@ -54,7 +54,7 @@ pub async fn start_server() {
         )
         .route(
             "/products/{id}",
-            get(handlers::create_product)
+            get(handlers::show_product)
                 .patch(handlers::update_product)
                 .delete(handlers::delete_product),
         )
