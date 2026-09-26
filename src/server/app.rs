@@ -45,7 +45,17 @@ pub async fn start_server() {
     let config = AppConfig::load();
 
     let state = AppState { db, config };
-    let app = Router::new()
+    let app = app(state);
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+        .await
+        .unwrap();
+
+    tracing::info!("App running on http://localhost:3000");
+    axum::serve(listener, app).await.unwrap();
+}
+
+pub fn app(state: AppState) -> Router {
+    Router::new()
         .route("/", get(handlers::index))
         .route("/pay", post(handlers::pay))
         .route(
@@ -60,12 +70,5 @@ pub async fn start_server() {
         )
         .with_state(state)
         .layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()))
-        .fallback(global_fallback_handler);
-
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
-        .await
-        .unwrap();
-
-    tracing::info!("App running on http://localhost:3000");
-    axum::serve(listener, app).await.unwrap();
+        .fallback(global_fallback_handler)
 }
