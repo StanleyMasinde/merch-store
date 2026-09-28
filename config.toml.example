@@ -8,3 +8,4 @@ business_shortcode = 174379
 
 [database]
 connection = "mysql://user:password@localhost:3306/merch_store" 
+test_connection = "mysql://user:password@localhost:3306/merch_store_test"

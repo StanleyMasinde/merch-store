@@ -14,6 +14,28 @@ curl  "localhost:3000/pay" --json '{"phone_number": <phone number to prompt>, "a
 ```
 That's it for now.
 
+## Testing
+
+Integration tests live in `tests/`, with shared setup in `tests/common/mod.rs`.
+They run against a real MySQL database, which must already have migrations
+applied:
+
+1. Create an empty database for tests, e.g. `merch_store_test`.
+2. Set `database.test_connection` in `config.toml` to point at it (see
+   `config.toml.example`).
+3. Apply migrations to it: temporarily point `database.connection` in
+   `config.toml` at the test database, run
+   `cargo run --bin cli -- migration apply`, then restore `config.toml`.
+4. Run the suite:
+```shell
+cargo test
+```
+
+Tests connect to `database.test_connection`; set `TEST_DATABASE_URL` to
+override it (same URL format), e.g. in CI. Each test seeds rows with unique
+slugs and deletes them afterwards, so tests can run in parallel against a
+shared database.
+
 ## Database Migrations
 
 Migrations are handled by a separate `cli` binary (built from `src/bin/cli.rs`), backed by Toasty's migration system. Migration configuration lives in `Toasty.toml`, with generated SQL, snapshots, and history tracked under `database/`.

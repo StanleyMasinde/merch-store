@@ -14,6 +14,7 @@ pub struct Daraja {
 #[derive(Clone, Deserialize)]
 pub struct DbConfig {
     pub connection: String,
+    pub test_connection: String,
 }
 
 #[derive(Clone, Deserialize)]
@@ -38,3 +39,4 @@ impl AppConfig {
         toml::from_str(&contents).expect("Config is malformed.")
     }
 }
+
